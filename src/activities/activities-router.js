@@ -12,7 +12,7 @@ const serializeActivity = activity => ({
   content: xss(activity.content),
   duration: xss(activity.duration),
   materials: xss(activity.materials),
-  ageGroup: activity.ageGroup,
+  agegroup: activity.agegroup,
   category: activity.category
 })
 
@@ -28,8 +28,8 @@ activitiesRouter
       .catch(next)
   })
   .post(jsonParser, (req, res, next) => {
-    const { name, content, duration, materials, ageGroup, category } = req.body
-    const newActivity = { name, content, duration, materials, ageGroup, category }
+    const { name, content, duration, materials, agegroup, category } = req.body
+    const newActivity = { name, content, duration, materials, agegroup, category }
 
     ActivitiesService.insertActivity(
       req.app.get('db'),
