@@ -8,7 +8,7 @@ const jsonParser = express.json();
 
 const serializeCategory = category => ({
   id: category.id,
-  category: category.category
+  category: xss(category.category)
 })
 
 categoriesRouter
