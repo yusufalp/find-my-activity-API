@@ -8,6 +8,6 @@ CREATE TABLE activities (
   content TEXT NOT NULL,
   duration TEXT NOT NULL,
   materials TEXT,
-  agegroup INTEGER,
+  agegroup NUMERIC,
   category TEXT NOT NULL
 )
