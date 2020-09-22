@@ -20,13 +20,4 @@ describe('Categories endpoints', () => {
         .expect('Content-Type', /json/);
     })
   })
-
-  describe('GET /api/articles', () => {
-    it('responds with 200', () => {
-      return supertest(app)
-        .get('/api/activities')
-        .expect(200)
-        .expect('Content-Type', /json/)
-    })
-  })
 })
