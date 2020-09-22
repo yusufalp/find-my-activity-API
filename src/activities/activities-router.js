@@ -1,5 +1,6 @@
 const express = require('express');
 const ActivitiesService = require('./activities-service');
+const path = require('path');
 // const path = require('path');
 const xss = require('xss');
 
@@ -38,6 +39,7 @@ activitiesRouter
       .then(activity => {
         res
           .status(201)
+          .location(path.posix.join(req.originalUrl, `/${activity.id}`))
           .json(serializeActivity(activity))
       })
       .catch(next)
