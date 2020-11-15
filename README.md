@@ -2,9 +2,7 @@
 
 This is an API for the Find My Activity project!
 
-## You can find the live demo at
-
-[https://find-my-activity.yusufalp.vercel.app/](https://find-my-activity.yusufalp.vercel.app/)
+Live demo can be access at [https://find-my-activity.yusufalp.vercel.app/](https://find-my-activity.yusufalp.vercel.app/)
 
 ## API Documentation
 
