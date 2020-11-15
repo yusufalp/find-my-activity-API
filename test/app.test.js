@@ -13,11 +13,13 @@ describe('Categories endpoints', () => {
   })
 
   describe('GET /api/categories', () => {
-    it('responds with 200', () => {
-      return supertest(app)
-        .get('/api/categories')
-        .expect(200)
-        .expect('Content-Type', /json/);
+    context('Given there are no data', () => {
+      it('responds with 200', () => {
+        return supertest(app)
+          .get('/api/categories')
+          .expect(200)
+          .expect('Content-Type', /json/);
+      })
     })
   })
 })

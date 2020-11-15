@@ -3,7 +3,7 @@ const knex = require('knex');
 const app = require('../src/app');
 const { makeActivities } = require('./activities.fixture');
 
-describe('Activities endpoints', () => {
+describe('Activities endpoint', () => {
   db = knex({
     client: 'pg',
     connection: process.env.TEST_DATABASE_URL
@@ -14,9 +14,9 @@ describe('Activities endpoints', () => {
     db.destroy()
   })
 
-  before('clean the table', () => db.raw('TRUNCATE activities, categories RESTART IDENTITY CASCADE'))
+  before('clean the table', () => db.raw('TRUNCATE activities RESTART IDENTITY CASCADE'))
 
-  afterEach('cleanup', () => db.raw('TRUNCATE activities, categories RESTART IDENTITY CASCADE'))
+  afterEach('cleanup', () => db.raw('TRUNCATE activities RESTART IDENTITY CASCADE'))
 
   describe('GET /api/activities', () => {
     context('Given there are no data', () => {
